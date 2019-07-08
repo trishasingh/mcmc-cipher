@@ -6,3 +6,4 @@ env
 
 # other
 .vscode
+.DS_Store

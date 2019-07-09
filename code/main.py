@@ -5,7 +5,7 @@ from collections import defaultdict
 import numpy as np
 import string
 
-from classes import CodingFunc
+from classes import CipherMap
 
 # Creating data
 transitions = defaultdict(dict)
@@ -36,17 +36,6 @@ for i in transitions:
     norm = 1.0/sum(transitions[i].values()) # sum of all transitions from i
     transitions[i] = {j: round(count * norm, 4) for j,count in transitions[i].items()}
 
-
-# Initialize random mapping
-chars = list(' ' + string.ascii_lowercase)
-random_chars = list(np.random.choice(chars, len(chars), replace = False))
-
-init_map = dict()
-
-for k,v in zip(chars, random_chars):
-    init_map[k] = v
-
-print(init_map)
 
 
 # clue for transpositions

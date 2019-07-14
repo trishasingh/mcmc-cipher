@@ -5,7 +5,7 @@ from collections import defaultdict
 import numpy as np
 import string
 
-from classes import CipherMap
+from classes import CodingFunc
 
 # Creating data
 transitions = defaultdict(dict)
@@ -32,15 +32,17 @@ with open("data/war_and_peace.txt", 'r') as reader:
                     prev = item
 
 # Normalize transition probabilities (round to 4 places)
+"""
 for i in transitions:
     norm = 1.0/sum(transitions[i].values()) # sum of all transitions from i
-    transitions[i] = {j: round(count * norm, 4) for j,count in transitions[i].items()}
+    transitions[i] = {j: round(count * norm, 5) for j,count in transitions[i].items()}
+"""
 
-
+print(transitions['a']['a'])
 
 # clue for transpositions
 
-print({'a': 'b', 'b': 'c'}['a'])
+# print({'a': 'b', 'b': 'c'}['a'])
 
 
 # HELPER FUNCTIONS

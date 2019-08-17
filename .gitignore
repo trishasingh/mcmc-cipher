@@ -7,3 +7,7 @@ env
 # other
 .vscode
 .DS_Store
+
+# hide for now
+classes_test.py
+main_test.py
